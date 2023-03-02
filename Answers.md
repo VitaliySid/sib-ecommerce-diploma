@@ -78,7 +78,7 @@ private fun generateToken(length: Int = 128): String = ByteArray(length).apply {
 2. Отсутствие проверки авторизации и прав при запросе удаления продукта
 ![](pic/product-delete.png)
 
-# Рекомендации
+## Рекомендации
 1. При запуске приложения в контейнере использовать пользователя с минимально необходимыми правами
 2. Убрать возможность просмотра заказа по идентификатору без авторизации 
 3. Убрать возможность удаления сущности продукта без авторизации и проверки прав
@@ -89,3 +89,14 @@ private fun generateToken(length: Int = 128): String = ByteArray(length).apply {
 8. При генерации токена использовать криптобезопасные механизмы  
 9. Добавить механизм инвалидации токена авторизации при выходе из аккаунта  
 10. Большинство проблем были выявлены после ревью кода. Рекомендуется в команде разработки выделить роль `security champion`
+
+## Используемые документы и рекомендации тестирования  
+1. [Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v42/) - `Официальный ресурс WSTG - v4.2`  
+2. [OWASP Web Security Testing Guide: как улучшить защищённость web-приложений](https://habr.com/ru/company/owasp/blog/703322/) - `Русскоязычная статья`  
+3. [OWASP Top Ten](https://owasp.org/www-project-top-ten/)   - `Официальный ресурс с классификацией уязвимостей`  
+
+## Список используемого ПО  
+1. [OWASP ZAP](https://www.zaproxy.org/) - `Средство динамического тестирования приложений`  
+2. [Burp Suite](https://portswigger.net/burp)  - `Средство динамического тестирования приложений`  
+3. [SonarQube](https://www.sonarsource.com/products/sonarqube/?ref=kubedexcom)  - `Средство статического анализа и оценки качества кода`  
+4. [Semgrep](https://semgrep.dev/)  - `Средство статического анализа кода`  
